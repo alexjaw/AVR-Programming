@@ -22,10 +22,14 @@ int main(void) {
   while (1) {
 
     serialCharacter = receiveByte();
-    transmitByte(serialCharacter);
-    LED_PORT = serialCharacter;
-                           /* display ascii/numeric value of character */
+    transmitByte(serialCharacter);       //byte->char,   0->'0'
+    printString("\r\n");
+    printBinaryByte(serialCharacter);    //byte->binary, 0->00110000 (ascii) 
+    printString("\r\n");
+    printByte(serialCharacter);          //byte->dec,    0->048 (ascii)
+    printString("\r\n");
+    LED_PORT = serialCharacter;          /* display ascii/numeric value of character */
 
-  }                                                  /* End event loop */
+  }                                      /* End event loop */
   return 0;
 }
