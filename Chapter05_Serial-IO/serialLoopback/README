@@ -1,0 +1,8 @@
+Have successfully played with the code using
+
+python -m serial.tools.miniterm /dev/ttyUSB0 9600
+
+In the setup Arduino as ISP was attached to /dev/ttyAMA0,
+therfore AVR attached to /dev/ttyUSB0
+
+ 
