@@ -5,4 +5,7 @@ python -m serial.tools.miniterm /dev/ttyUSB0 9600
 In the setup Arduino as ISP was attached to /dev/ttyAMA0,
 therfore AVR attached to /dev/ttyUSB0
 
- 
+Loading of code onto AVR using MAkefile from Chapter02/blinkLED
+(programmer_type = avrisp)
+1. fist make clean
+2. then make flash 

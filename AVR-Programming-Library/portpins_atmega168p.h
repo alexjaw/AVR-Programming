@@ -1,4 +1,4 @@
-/* atmega 328p
+/* atmega 168p
    Copyright (c) 2003  Theodore A. Roth
    All rights reserved.
 

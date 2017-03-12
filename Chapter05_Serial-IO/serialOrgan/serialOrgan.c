@@ -56,6 +56,12 @@ int main(void) {
       }
     }
 
+//    if (isNote) {
+//      transmitByte('O');              /* Ok*/
+//    } else {
+//      transmitByte('E');              /* Not Ok - match not found */
+//    }
+
                       /* Handle non-note keys: tempo changes and rests */
     if (!isNote) {
       if (fromCompy == '[') {                   /* code for short note */

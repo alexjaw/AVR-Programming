@@ -26,19 +26,21 @@ if __name__ == "__main__":
   ## More on serial buffers later.
 
   ## An intentional example.  You can use this for playing music on purpose.
-  playString("f g h j k l ; ]'[", s)
+  playString("f g ; ]'[", s)
   raw_input("Press enter for next demo\n")
 
   ## A fun / stupid example.  You can just type stuff and see what comes out.
-  playString("hello there, this is a random string turned into 'music'", s)
+  playString("hello", s)
   raw_input("Press enter for next demo\n")
 
   ## A really frivolous example.  Play websites!
   ## Bonus points for first person to tweet themselves a song.
-  print ("Downloading song data from http://serialorgansongs.jottit.com/...")
+  url = "http://serialorgansongs.jottit.com/"
+  url = "https://www.jottit.com/mdngu/"
+  print ("Downloading song data from {}...".format(url))
   import re
   contentFilter = re.compile(r'<p>(.*?)</p>')
-  songSite = urllib2.urlopen("http://serialorgansongs.jottit.com/").read()
+  songSite = urllib2.urlopen(url).read()
   songText = contentFilter.findall(songSite)[0]
   playString(songText, s)
  
